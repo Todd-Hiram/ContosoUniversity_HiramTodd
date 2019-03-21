@@ -1,13 +1,21 @@
 ﻿<Properties StartupConfiguration="{2FD363AD-D6AE-45DC-B123-26A7F16E62F7}|Default">
-  <MonoDevelop.Ide.ItemProperties.ContosoUniversity__HiramTodd FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ContosoUniversity__HiramTodd PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContosoUniversity_HiramTodd/Program.cs">
+    <Files>
+      <File FileName="ContosoUniversity_HiramTodd/Program.cs" Line="24" Column="37" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ContosoUniversity_HiramTodd" expanded="True" selected="True">
-            <Node name="ContosoUniversity_HiramTodd" expanded="True" />
+          <Node name="ContosoUniversity_HiramTodd" expanded="True">
+            <Node name="ContosoUniversity_HiramTodd" expanded="True">
+              <Node name="Controllers" expanded="True" selected="True" />
+            </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -2686,6 +2697,26 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Web.Xdt/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.XmlTransform.dll": {}
+        }
+      },
+      "Microsoft.Win32.Primitives/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        }
+      },
       "Microsoft.Win32.Registry/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -2744,6 +2775,183 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "NuGet.CommandLine/4.9.4": {
+        "type": "package"
+      },
+      "NuGet.Common/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.Frameworks": "4.9.4",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Common.dll": {}
+        }
+      },
+      "NuGet.Configuration/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.Common": "4.9.4",
+          "System.Security.Cryptography.ProtectedData": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Configuration.dll": {}
+        }
+      },
+      "NuGet.Core/2.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Web.Xdt": "2.1.0"
+        },
+        "compile": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/NuGet.Core.dll": {}
+        }
+      },
+      "NuGet.DependencyResolver.Core/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.LibraryModel": "4.9.4",
+          "NuGet.Protocol": "4.9.4"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.DependencyResolver.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.DependencyResolver.Core.dll": {}
+        }
+      },
+      "NuGet.Frameworks/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NuGet.LibraryModel/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.Common": "4.9.4",
+          "NuGet.Versioning": "4.9.4"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.LibraryModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.LibraryModel.dll": {}
+        }
+      },
+      "NuGet.Packaging/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "NuGet.Configuration": "4.9.4",
+          "NuGet.Packaging.Core": "4.9.4",
+          "System.Dynamic.Runtime": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Packaging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Packaging.dll": {}
+        }
+      },
+      "NuGet.Packaging.Core/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.Common": "4.9.4",
+          "NuGet.Versioning": "4.9.4"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Packaging.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Packaging.Core.dll": {}
+        }
+      },
+      "NuGet.ProjectModel/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.DependencyResolver.Core": "4.9.4",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Threading.Thread": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.ProjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.ProjectModel.dll": {}
+        }
+      },
+      "NuGet.Protocol/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "NuGet.Configuration": "4.9.4",
+          "NuGet.Packaging": "4.9.4",
+          "System.Dynamic.Runtime": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Protocol.dll": {}
+        }
+      },
+      "NuGet.Versioning/4.9.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/NuGet.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Versioning.dll": {}
+        }
+      },
+      "NuGet.VisualStudio/4.9.4": {
+        "type": "package",
+        "build": {
+          "build/NuGet.VisualStudio.targets": {}
+        }
+      },
+      "NUnit/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/NUnit.props": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3172,6 +3380,49 @@
             "rid": "unix"
           },
           "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Diagnostics.Process/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -4049,6 +4300,29 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Security.Cryptography.Primitives": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.X509Certificates/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4281,10 +4555,23 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Threading.Thread.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.Thread.dll": {}
+        }
+      },
+      "System.Threading.ThreadPool/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
       "System.ValueTuple/4.3.0": {
@@ -4442,6 +4729,35 @@
     }
   },
   "libraries": {
+    "EntityFramework/6.2.0": {
+      "sha512": "+aB/cnEAr9KqVMjmZwu+Fzy3EOPjCIzNsPAUyn19WbB2u3LFHd2OB3X56ohAj7EBf2hppl9M27nlRnkQxOhoAA==",
+      "type": "package",
+      "path": "entityframework/6.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "91JMnE9zdIDphG00qgRvl8ZwKEjqAbNlJdfXUoMiIWPfpYyH7fyCsTSj6/aynRdw/Qr/K70xC7QC6MOJ1vFBJQ==",
       "type": "package",
@@ -7164,6 +7480,54 @@
         "version.txt"
       ]
     },
+    "Microsoft.Web.Xdt/2.1.0": {
+      "sha512": "pQ23sJ99NiZRC6MnWa5jbXZiHo8R4dcPX3ou8YWTeBfkUX4++Olu0hGf64Zfzg1IEqituJXW+WskCflOGxzeTw==",
+      "type": "package",
+      "path": "microsoft.web.xdt/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Microsoft.Web.XmlTransform.dll",
+        "microsoft.web.xdt.2.1.0.nupkg.sha512",
+        "microsoft.web.xdt.nuspec"
+      ]
+    },
+    "Microsoft.Win32.Primitives/4.3.0": {
+      "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
+      "type": "package",
+      "path": "microsoft.win32.primitives/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/Microsoft.Win32.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.win32.primitives.4.3.0.nupkg.sha512",
+        "microsoft.win32.primitives.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/Microsoft.Win32.Primitives.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Primitives.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/de/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/es/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/fr/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/it/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ja/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ko/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ru/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._"
+      ]
+    },
     "Microsoft.Win32.Registry/4.5.0": {
       "sha512": "LKmf0FiggwZBhNoz0S9ypcQ0EhUdQmwwniKEpd9LcisvJtxyYWq2RSok7YFpODm3VoYdR+6ifWDX23/2dJq2ZA==",
       "type": "package",
@@ -7375,6 +7739,216 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "NuGet.CommandLine/4.9.4": {
+      "sha512": "z9OOQjUjZA0V7O46MAyoInHjSOtjb4f/9iWEdqMYAFUTiBnPuvDT1XBZr3WGuXEfyemcpdB0O1M5tbIRxxxJ2Q==",
+      "type": "package",
+      "path": "nuget.commandline/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "nuget.commandline.4.9.4.nupkg.sha512",
+        "nuget.commandline.nuspec",
+        "tools/NuGet.exe"
+      ]
+    },
+    "NuGet.Common/4.9.4": {
+      "sha512": "PpQ9Ykk/aVkeMGjCIQ7SLlEE/MEzj46G9cNJZrKj61ahIioc878a67G/cdbjlAPoYPBx6FBv9oeWxOdwBMz+IQ==",
+      "type": "package",
+      "path": "nuget.common/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Common.dll",
+        "lib/net46/NuGet.Common.xml",
+        "lib/netstandard1.6/NuGet.Common.dll",
+        "lib/netstandard1.6/NuGet.Common.xml",
+        "nuget.common.4.9.4.nupkg.sha512",
+        "nuget.common.nuspec"
+      ]
+    },
+    "NuGet.Configuration/4.9.4": {
+      "sha512": "yzWQpzCTiyUlH8hWfIhXnpZEeoiwn7gMG5A7gVdcEBbxWqfQdTMHZAmaeYgGlptPWXSCcu2KNgl8lzGQzxVq8A==",
+      "type": "package",
+      "path": "nuget.configuration/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Configuration.dll",
+        "lib/net46/NuGet.Configuration.xml",
+        "lib/netstandard1.6/NuGet.Configuration.dll",
+        "lib/netstandard1.6/NuGet.Configuration.xml",
+        "nuget.configuration.4.9.4.nupkg.sha512",
+        "nuget.configuration.nuspec"
+      ]
+    },
+    "NuGet.Core/2.14.0": {
+      "sha512": "P0rzDBgODTRWyakVkB3evtofDcL6gfIXeJqluTwXARZWszJakmMOyrmnXf5E3ZflO6G9fxioGiwfov6mfgzXuQ==",
+      "type": "package",
+      "path": "nuget.core/2.14.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net40-Client/NuGet.Core.dll",
+        "nuget.core.2.14.0.nupkg.sha512",
+        "nuget.core.nuspec"
+      ]
+    },
+    "NuGet.DependencyResolver.Core/4.9.4": {
+      "sha512": "3SRdQG3+w76QhldTtkte8Ii7BgYf9Ql3njR8qYldn3o0NPf7AQCGpJZAy2G9MJeNv25jE1f05GCLJ0avVk8r3A==",
+      "type": "package",
+      "path": "nuget.dependencyresolver.core/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.DependencyResolver.Core.dll",
+        "lib/net46/NuGet.DependencyResolver.Core.xml",
+        "lib/netstandard1.6/NuGet.DependencyResolver.Core.dll",
+        "lib/netstandard1.6/NuGet.DependencyResolver.Core.xml",
+        "nuget.dependencyresolver.core.4.9.4.nupkg.sha512",
+        "nuget.dependencyresolver.core.nuspec"
+      ]
+    },
+    "NuGet.Frameworks/4.9.4": {
+      "sha512": "ZOW4jlWYDNKURAX8IL0jWbPt8Db6T+HyqTGzkz8NLrbkFqQHHoLZ8kmrP4250/46Td0AVILczCJZC9+pMNKEkA==",
+      "type": "package",
+      "path": "nuget.frameworks/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/NuGet.Frameworks.dll",
+        "lib/net40/NuGet.Frameworks.xml",
+        "lib/net46/NuGet.Frameworks.dll",
+        "lib/net46/NuGet.Frameworks.xml",
+        "lib/netstandard1.6/NuGet.Frameworks.dll",
+        "lib/netstandard1.6/NuGet.Frameworks.xml",
+        "nuget.frameworks.4.9.4.nupkg.sha512",
+        "nuget.frameworks.nuspec"
+      ]
+    },
+    "NuGet.LibraryModel/4.9.4": {
+      "sha512": "2SBP6q5tk5lYoQ0TCIljNN6S9CfIVYTMI1wHR23hNXCUDTTWxinAmD8DDwxlu2CTxR1iqqkkoIXAmWxSX7uClw==",
+      "type": "package",
+      "path": "nuget.librarymodel/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.LibraryModel.dll",
+        "lib/net46/NuGet.LibraryModel.xml",
+        "lib/netstandard1.6/NuGet.LibraryModel.dll",
+        "lib/netstandard1.6/NuGet.LibraryModel.xml",
+        "nuget.librarymodel.4.9.4.nupkg.sha512",
+        "nuget.librarymodel.nuspec"
+      ]
+    },
+    "NuGet.Packaging/4.9.4": {
+      "sha512": "eLuF2vaFnx7kix6sjOXenqmkmKqit+ySmbrp5ElhZFbKSAGjdc5HQbceYsfY5DZhk2D7N3uvpffae+xhTrqQjg==",
+      "type": "package",
+      "path": "nuget.packaging/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Packaging.dll",
+        "lib/net46/NuGet.Packaging.xml",
+        "lib/netstandard1.6/NuGet.Packaging.dll",
+        "lib/netstandard1.6/NuGet.Packaging.xml",
+        "nuget.packaging.4.9.4.nupkg.sha512",
+        "nuget.packaging.nuspec"
+      ]
+    },
+    "NuGet.Packaging.Core/4.9.4": {
+      "sha512": "3gf0smMMU4DbBlA8vxtRx1IDx7ktAQJ57O7eMeL10qXw+C84kHCw8EGdPV+luX5vceCQMbqNPj3qFaLUe2cB5g==",
+      "type": "package",
+      "path": "nuget.packaging.core/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Packaging.Core.dll",
+        "lib/net46/NuGet.Packaging.Core.xml",
+        "lib/netstandard1.6/NuGet.Packaging.Core.dll",
+        "lib/netstandard1.6/NuGet.Packaging.Core.xml",
+        "nuget.packaging.core.4.9.4.nupkg.sha512",
+        "nuget.packaging.core.nuspec"
+      ]
+    },
+    "NuGet.ProjectModel/4.9.4": {
+      "sha512": "MsqumapZrITBB+sz82A3raE/Y7zlv7LyEInpjA1Coq0yybPuuDYa1zyDWckgiNrOsE0ZkReOVgFx9ZlYK8hdew==",
+      "type": "package",
+      "path": "nuget.projectmodel/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.ProjectModel.dll",
+        "lib/net46/NuGet.ProjectModel.xml",
+        "lib/netstandard1.6/NuGet.ProjectModel.dll",
+        "lib/netstandard1.6/NuGet.ProjectModel.xml",
+        "nuget.projectmodel.4.9.4.nupkg.sha512",
+        "nuget.projectmodel.nuspec"
+      ]
+    },
+    "NuGet.Protocol/4.9.4": {
+      "sha512": "amvlMPzDE19n313khQKzc2APeF8P2osw7efyPrvuu+xy9PoH2xwFpR8pT8Q07sCOgwfAqlWtD//D8sNIsjP9lw==",
+      "type": "package",
+      "path": "nuget.protocol/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Protocol.dll",
+        "lib/net46/NuGet.Protocol.xml",
+        "lib/netstandard1.6/NuGet.Protocol.dll",
+        "lib/netstandard1.6/NuGet.Protocol.xml",
+        "nuget.protocol.4.9.4.nupkg.sha512",
+        "nuget.protocol.nuspec"
+      ]
+    },
+    "NuGet.Versioning/4.9.4": {
+      "sha512": "j4dIaI9ULojhlIiEea7JpQsc5bH6XgKqnaU5iPS8J9s1EIrxmOV6bMJ51iGtfzRAWLiZv/cjpPtzBFpqwD/nIQ==",
+      "type": "package",
+      "path": "nuget.versioning/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/NuGet.Versioning.dll",
+        "lib/net46/NuGet.Versioning.xml",
+        "lib/netstandard1.6/NuGet.Versioning.dll",
+        "lib/netstandard1.6/NuGet.Versioning.xml",
+        "nuget.versioning.4.9.4.nupkg.sha512",
+        "nuget.versioning.nuspec"
+      ]
+    },
+    "NuGet.VisualStudio/4.9.4": {
+      "sha512": "CcFyBESZfgSRayyYb/w1lmzGihKkFvndkEcWkPwMtUXD1BK7tPVugJ69nLQBcwM0k9gh37VTnWvwkGlfBpGH8Q==",
+      "type": "package",
+      "path": "nuget.visualstudio/4.9.4",
+      "files": [
+        ".signature.p7s",
+        "build/NuGet.VisualStudio.targets",
+        "lib/net46/NuGet.VisualStudio.dll",
+        "lib/net46/NuGet.VisualStudio.xml",
+        "nuget.visualstudio.4.9.4.nupkg.sha512",
+        "nuget.visualstudio.nuspec"
+      ]
+    },
+    "NUnit/3.11.0": {
+      "sha512": "zecrYxUA5p5w8AZ2bvbBbiUIcrQnZAVPrziNMSWMdcOi0D2Oe7yKUNivWPIQMcUwQDHmWtS/ijnD48ubU/eHZQ==",
+      "type": "package",
+      "path": "nunit/3.11.0",
+      "files": [
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "build/NUnit.props",
+        "lib/net20/NUnit.System.Linq.dll",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.pdb",
+        "lib/net20/nunit.framework.xml",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.pdb",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.pdb",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.pdb",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.4/nunit.framework.dll",
+        "lib/netstandard1.4/nunit.framework.pdb",
+        "lib/netstandard1.4/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.pdb",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.11.0.nupkg.sha512",
+        "nunit.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -8378,6 +8952,63 @@
         "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll",
         "system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512",
         "system.diagnostics.fileversioninfo.nuspec"
+      ]
+    },
+    "System.Diagnostics.Process/4.3.0": {
+      "sha512": "gFvIaiWxt33En3oUVkzSYUzKoOm8abV8IbM53HPOfLZBLD9yRdDxvqRihK/1ySRkFp5NZIXd4cYWsY0ybnvANg==",
+      "type": "package",
+      "path": "system.diagnostics.process/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.Process.dll",
+        "lib/net461/System.Diagnostics.Process.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.Process.dll",
+        "ref/net461/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/System.Diagnostics.Process.dll",
+        "ref/netstandard1.4/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hant/System.Diagnostics.Process.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net461/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.diagnostics.process.4.3.0.nupkg.sha512",
+        "system.diagnostics.process.nuspec"
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
@@ -10959,6 +11590,36 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.3.0": {
+      "sha512": "SKBimS+Ig5r6yWvl22n6i5rDY0Sf97hNnc5QjmNHDeginmm2g7Rwcx4S0JG2u3XkHi+ODyghoZkTCS93afTeyw==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.3.0",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "system.security.cryptography.protecteddata.4.3.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec"
+      ]
+    },
     "System.Security.Cryptography.X509Certificates/4.3.0": {
       "sha512": "t2Tmu6Y2NtJ2um0RtcuhP7ZdNNxXEgUm2JeoA/0NvlMjAhKCnM1NX07TDl3244mVp3QU6LPEhT3HTtH1uF7IYw==",
       "type": "package",
@@ -11736,6 +12397,46 @@
         "system.threading.thread.nuspec"
       ]
     },
+    "System.Threading.ThreadPool/4.3.0": {
+      "sha512": "RQpA+UpI6Tlpeedk5JStYk2DM/M3i5HqabI/yDbfj1xDu9bIz9kdoquVpHbh/wQjOJaOCbcgRH8iQcAUv8dRWQ==",
+      "type": "package",
+      "path": "system.threading.threadpool/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Threading.ThreadPool.dll",
+        "lib/netcore50/_._",
+        "lib/netstandard1.3/System.Threading.ThreadPool.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/de/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/es/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/fr/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/it/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ja/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ko/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ru/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.ThreadPool.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.threadpool.4.3.0.nupkg.sha512",
+        "system.threading.threadpool.nuspec"
+      ]
+    },
     "System.ValueTuple/4.3.0": {
       "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
       "type": "package",
@@ -12081,9 +12782,20 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "EntityFramework >= 6.2.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "NUnit >= 3.11.0",
+      "NuGet.CommandLine >= 4.9.4",
+      "NuGet.Common >= 4.9.4",
+      "NuGet.Configuration >= 4.9.4",
+      "NuGet.Core >= 2.14.0",
+      "NuGet.DependencyResolver.Core >= 4.9.4",
+      "NuGet.Frameworks >= 4.9.4",
+      "NuGet.LibraryModel >= 4.9.4",
+      "NuGet.ProjectModel >= 4.9.4",
+      "NuGet.VisualStudio >= 4.9.4"
     ]
   },
   "packageFolders": {
@@ -12125,6 +12837,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.2.0, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12141,6 +12857,46 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.11.0, )"
+          },
+          "NuGet.CommandLine": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.Common": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.Configuration": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.Core": {
+            "target": "Package",
+            "version": "[2.14.0, )"
+          },
+          "NuGet.DependencyResolver.Core": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.Frameworks": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.LibraryModel": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.ProjectModel": {
+            "target": "Package",
+            "version": "[4.9.4, )"
+          },
+          "NuGet.VisualStudio": {
+            "target": "Package",
+            "version": "[4.9.4, )"
           }
         },
         "imports": [
@@ -12150,5 +12906,37 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 6.2.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Xdt 2.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Xdt",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NuGet.Core 2.14.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "NuGet.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }
