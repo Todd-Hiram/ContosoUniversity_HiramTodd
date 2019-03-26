@@ -1,4 +1,4 @@
-﻿namespace ContosoUniversity.Models
+﻿namespace ContosoUniversity_HiramTodd.Models
 {
     public enum Grade
     {

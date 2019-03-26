@@ -1,9 +1,9 @@
 ﻿using System;
-using ContosoUniversity.Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using ContosoUniversity_HiramTodd.Data;
 
 namespace ContosoUniversity_HiramTodd
 {
@@ -11,7 +11,7 @@ namespace ContosoUniversity_HiramTodd
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args).Build();
+            var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
             {
@@ -28,12 +28,12 @@ namespace ContosoUniversity_HiramTodd
                 }
             }
 
-            // CreateWebHostBuilder(args).Build().Run();
             host.Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .Build();
     }
 }

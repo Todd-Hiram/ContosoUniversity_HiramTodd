@@ -60,7 +60,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #FF5100;
 }
 
 [tabindex="-1"]:focus {
@@ -153,7 +153,7 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: #08C4C1;
     text-decoration: none;
     background-color: transparent;
 }
@@ -2551,7 +2551,8 @@ textarea.form-control {
 .btn {
     display: inline-block;
     font-weight: 400;
-    color: #212529;
+    color: #08C4C1;
+    text-decoration-style: solid;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -5297,9 +5298,15 @@ a.badge-dark:focus, a.badge-dark.focus {
 .jumbotron {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color: #e9ecef;
-    border-radius: 0.3rem;
+    /*background-color: #940D0B;*/
+    background-image: url('../Images/audience-auditorium-chairs-356065.jpg') border-radius: 0.3rem;
 }
+
+    .jumbotron h1 {
+        font-family: 'Anton', sans-serif;
+        font-family: 'EB Garamond', serif;
+        color: #FFEAD9;
+    }
 
 @media (min-width: 576px) {
     .jumbotron {
@@ -6820,7 +6827,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-    background-color: #fff !important;
+    background-color: #105761 !important;
 }
 
 .bg-transparent {
@@ -10693,7 +10700,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-    color: #6c757d !important;
+    color: #090D0B !important;
 }
 
 .text-black-50 {

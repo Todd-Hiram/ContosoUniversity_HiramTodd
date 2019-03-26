@@ -1,21 +1,36 @@
 ﻿<Properties StartupConfiguration="{2FD363AD-D6AE-45DC-B123-26A7F16E62F7}|Default">
   <MonoDevelop.Ide.ItemProperties.ContosoUniversity__HiramTodd PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ContosoUniversity_HiramTodd/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContosoUniversity_HiramTodd/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="ContosoUniversity_HiramTodd/Program.cs" Line="24" Column="37" />
+      <File FileName="ContosoUniversity_HiramTodd/Views/Shared/_Layout.cshtml" Line="24" Column="40" />
+      <File FileName="ContosoUniversity_HiramTodd/wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="5302" Column="100" />
+      <File FileName="ContosoUniversity_HiramTodd/wwwroot/css/site.css" Line="35" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ContosoUniversity_HiramTodd" expanded="True">
             <Node name="ContosoUniversity_HiramTodd" expanded="True">
-              <Node name="Controllers" expanded="True" selected="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="Images" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="bootstrap" expanded="True">
+                    <Node name="dist" expanded="True">
+                      <Node name="css" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
