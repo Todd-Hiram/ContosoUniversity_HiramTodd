@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ContosoUniversity_HiramTodd.Data;
 using ContosoUniversity_HiramTodd.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity_HiramTodd.Controllers
 {
