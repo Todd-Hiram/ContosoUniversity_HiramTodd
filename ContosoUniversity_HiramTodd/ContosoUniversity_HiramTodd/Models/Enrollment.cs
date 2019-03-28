@@ -1,4 +1,6 @@
-﻿namespace ContosoUniversity_HiramTodd.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ContosoUniversity_HiramTodd.Models
 {
     public enum Grade
     {
@@ -20,6 +22,7 @@
         // The StudentID property is a foreign key, and the corresponding 
         // navigation property is Student
         public int StudentID { get; set; } 
+        [DisplayFormat(NullDisplayText = "No grade")]
         public Grade? Grade { get; set; }
 
         public Course Course { get; set; }

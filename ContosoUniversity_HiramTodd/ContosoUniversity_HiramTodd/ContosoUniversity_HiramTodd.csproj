@@ -17,5 +17,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\Images\" />
+    <Folder Include="Models\SchoolViewModels\" />
+    <Folder Include="Views\Instructors\" />
+    <Folder Include="Views\Courses\" />
+    <Folder Include="Views\Departments\" />
   </ItemGroup>
 </Project>
