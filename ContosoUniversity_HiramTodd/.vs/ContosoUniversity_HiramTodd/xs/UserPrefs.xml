@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{2FD363AD-D6AE-45DC-B123-26A7F16E62F7}|Default">
   <MonoDevelop.Ide.ItemProperties.ContosoUniversity__HiramTodd PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ContosoUniversity_HiramTodd/Models/Person.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContosoUniversity_HiramTodd/wwwroot/lib/bootstrap/dist/css/bootstrap.css">
     <Files>
-      <File FileName="ContosoUniversity_HiramTodd/Views/Instructors/Index.cshtml" Line="121" Column="22" />
-      <File FileName="ContosoUniversity_HiramTodd/Models/Person.cs" Line="13" Column="28" />
+      <File FileName="ContosoUniversity_HiramTodd/wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="5320" Column="34" />
+      <File FileName="ContosoUniversity_HiramTodd/wwwroot/css/site.css" Line="22" Column="14" />
+      <File FileName="ContosoUniversity_HiramTodd/Views/Shared/_Layout.cshtml" Line="27" Column="40" />
+      <File FileName="ContosoUniversity_HiramTodd/Views/Home/Index.cshtml" Line="40" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,18 +13,27 @@
           <Node name="ContosoUniversity_HiramTodd" expanded="True">
             <Node name="ContosoUniversity_HiramTodd" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="SchoolViewModels" expanded="True" />
-                <Node name="Person.cs" selected="True" />
-              </Node>
               <Node name="Views" expanded="True">
-                <Node name="Departments" expanded="True" />
-                <Node name="Instructors" expanded="True" />
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="lib" expanded="True">
+                  <Node name="bootstrap" expanded="True">
+                    <Node name="dist" expanded="True">
+                      <Node name="css" expanded="True">
+                        <Node name="bootstrap.css" selected="True" />
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

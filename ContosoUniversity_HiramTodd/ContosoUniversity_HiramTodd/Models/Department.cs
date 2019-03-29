@@ -25,6 +25,8 @@ namespace ContosoUniversity_HiramTodd.Models
 
         public Instructor Administrator { get; set; }
         public ICollection<Course> Courses { get; set; }
-        public byte[] RowVersion { get; internal set; }
+
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ContosoUniversity_HiramTodd.Data;
 using ContosoUniversity_HiramTodd.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity_HiramTodd.Controllers
 {
@@ -22,7 +22,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
             string sortOrder,
             string currentFilter,
             string searchString,
-            int? page)
+            int? pageNumber)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -30,7 +30,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
 
             if (searchString != null)
             {
-                page = 1;
+                pageNumber = 1;
             }
             else
             {
@@ -38,6 +38,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
             }
 
             ViewData["CurrentFilter"] = searchString;
+
             var students = from s in _context.Students
                            select s;
             if (!String.IsNullOrEmpty(searchString))
@@ -62,7 +63,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
             }
 
             int pageSize = 3;
-            return View(await PaginatedList<Student>.CreateAsync(students.AsNoTracking(), page ?? 1, pageSize));
+            return View(await PaginatedList<Student>.CreateAsync(students.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Students/Details/5
@@ -74,10 +75,10 @@ namespace ContosoUniversity_HiramTodd.Controllers
             }
 
             var student = await _context.Students
-                .Include(s => s.Enrollments)
-                .ThenInclude(e => e.Course)
-                .AsNoTracking()
-                .SingleOrDefaultAsync(m => m.ID == id);
+                 .Include(s => s.Enrollments)
+                     .ThenInclude(e => e.Course)
+                 .AsNoTracking()
+                 .FirstOrDefaultAsync(m => m.ID == id);
 
             if (student == null)
             {
@@ -147,7 +148,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
             {
                 return NotFound();
             }
-            var studentToUpdate = await _context.Students.SingleOrDefaultAsync(s => s.ID == id);
+            var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.ID == id);
             if (await TryUpdateModelAsync<Student>(
                 studentToUpdate,
                 "",
@@ -194,15 +195,12 @@ namespace ContosoUniversity_HiramTodd.Controllers
 
             return View(student);
         }
-
         // POST: Students/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var student = await _context.Students
-                .AsNoTracking()
-                .SingleOrDefaultAsync(m => m.ID == id);
+            var student = await _context.Students.FindAsync(id);
             if (student == null)
             {
                 return RedirectToAction(nameof(Index));
@@ -217,8 +215,13 @@ namespace ContosoUniversity_HiramTodd.Controllers
             catch (DbUpdateException /* ex */)
             {
                 //Log the error (uncomment ex variable name and write a log.)
-                return RedirectToAction(nameof(Delete), new { id = id, saveChangesError = true });
+                return RedirectToAction(nameof(Delete), new { ID = id, saveChangesError = true });
             }
+        }
+
+        private bool StudentExists(int id)
+        {
+            return _context.Students.Any(e => e.ID == id);
         }
     }
 }

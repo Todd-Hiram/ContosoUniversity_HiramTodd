@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 using ContosoUniversity_HiramTodd.Data;
-using ContosoUniversity_HiramTodd.Models;
 using ContosoUniversity_HiramTodd.Models.SchoolViewModels;
+using ContosoUniversity_HiramTodd.Models;
 
 namespace ContosoUniversity_HiramTodd.Controllers
 {

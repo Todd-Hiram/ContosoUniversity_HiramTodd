@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ContosoUniversity.Models.SchoolViewModels;
-using ContosoUniversity_HiramTodd.Data;
-using ContosoUniversity_HiramTodd.Models;
-using ContosoUniversity_HiramTodd.Models.SchoolViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ContosoUniversity_HiramTodd.Models.SchoolViewModels;
+using ContosoUniversity_HiramTodd.Data;
+using ContosoUniversity_HiramTodd.Models;
 
 namespace ContosoUniversity_HiramTodd.Controllers
 {
@@ -28,12 +27,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
                   .Include(i => i.OfficeAssignment)
                   .Include(i => i.CourseAssignments)
                     .ThenInclude(i => i.Course)
-                        .ThenInclude(i => i.Enrollments)
-                            .ThenInclude(i => i.Student)
-                  .Include(i => i.CourseAssignments)
-                    .ThenInclude(i => i.Course)
                         .ThenInclude(i => i.Department)
-                  .AsNoTracking()
                   .OrderBy(i => i.LastName)
                   .ToListAsync();
 
@@ -48,8 +42,13 @@ namespace ContosoUniversity_HiramTodd.Controllers
             if (courseID != null)
             {
                 ViewData["CourseID"] = courseID.Value;
-                viewModel.Enrollments = viewModel.Courses.Where(
-                    x => x.CourseID == courseID).Single().Enrollments;
+                var selectedCourse = viewModel.Courses.Where(x => x.CourseID == courseID).Single();
+                await _context.Entry(selectedCourse).Collection(x => x.Enrollments).LoadAsync();
+                foreach (Enrollment enrollment in selectedCourse.Enrollments)
+                {
+                    await _context.Entry(enrollment).Reference(x => x.Student).LoadAsync();
+                }
+                viewModel.Enrollments = selectedCourse.Enrollments;
             }
 
             return View(viewModel);
@@ -83,8 +82,6 @@ namespace ContosoUniversity_HiramTodd.Controllers
         }
 
         // POST: Instructors/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FirstMidName,HireDate,LastName,OfficeAssignment")] Instructor instructor, string[] selectedCourses)
@@ -120,7 +117,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
                 .Include(i => i.OfficeAssignment)
                 .Include(i => i.CourseAssignments).ThenInclude(i => i.Course)
                 .AsNoTracking()
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (instructor == null)
             {
                 return NotFound();
@@ -149,6 +146,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
         // POST: Instructors/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, string[] selectedCourses)
@@ -162,7 +160,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
                 .Include(i => i.OfficeAssignment)
                 .Include(i => i.CourseAssignments)
                     .ThenInclude(i => i.Course)
-                .SingleOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
 
             if (await TryUpdateModelAsync<Instructor>(
                 instructorToUpdate,
@@ -217,7 +215,7 @@ namespace ContosoUniversity_HiramTodd.Controllers
 
                     if (instructorCourses.Contains(course.CourseID))
                     {
-                        CourseAssignment courseToRemove = instructorToUpdate.CourseAssignments.SingleOrDefault(i => i.CourseID == course.CourseID);
+                        CourseAssignment courseToRemove = instructorToUpdate.CourseAssignments.FirstOrDefault(i => i.CourseID == course.CourseID);
                         _context.Remove(courseToRemove);
                     }
                 }

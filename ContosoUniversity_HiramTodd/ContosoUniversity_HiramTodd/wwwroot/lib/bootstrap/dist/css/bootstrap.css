@@ -5312,13 +5312,21 @@ a.badge-dark:focus, a.badge-dark.focus {
     }
 
 .jumbotron2 {
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     margin-bottom: 2rem;
     background-image: url('../../../../Images/academy-accomplishment-celebrate-267885.jpg');
-    background-position: left;
+    background-position: -1px;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     border-radius: 0.3rem;
+    width: 100%;
+    height: 15rem;
+}
+
+.jumbotron2 h1 {
+    position: relative;
+    top: 1.05em;
+    color: #FFEAD9;
 }
 
     .come-join {
