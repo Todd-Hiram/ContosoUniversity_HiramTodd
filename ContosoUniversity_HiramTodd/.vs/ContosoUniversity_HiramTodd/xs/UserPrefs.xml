@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.ContosoUniversity__HiramTodd PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ContosoUniversity_HiramTodd/Views/Courses/Create.cshtml">
     <Files>
-      <File FileName="ContosoUniversity_HiramTodd/Views/Shared/_Layout.cshtml" Line="49" Column="50" />
-      <File FileName="ContosoUniversity_HiramTodd/Views/Courses/Create.cshtml" Line="16" Column="71" />
+      <File FileName="ContosoUniversity_HiramTodd/Views/Courses/Delete.cshtml" Line="4" Column="34" />
+      <File FileName="ContosoUniversity_HiramTodd/Views/Courses/Create.cshtml" Line="11" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,17 +14,23 @@
                 <Node name="Courses" expanded="True">
                   <Node name="Create.cshtml" selected="True" />
                 </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <RunToCursorBreakpoint file="/Users/hiramtodd/Documents/GitHub/ContosoUniversity_HiramTodd/ContosoUniversity_HiramTodd/ContosoUniversity_HiramTodd/Views/Courses/Delete.cshtml" relfile="ContosoUniversity_HiramTodd/Views/Courses/Delete.cshtml" line="54" column="7" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
